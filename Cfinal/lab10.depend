@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1553975582 source:c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\cscd240lab10.c
+	"./words/word.h"
+	"./utils/basicUtils.h"
+	"./utils/fileUtils.h"
+	"./genericArray/genericArray.h"
+
+1596999656 c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\words\word.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1553976168 c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\utils\basicutils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1553976330 c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\utils\fileutils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1597003351 c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\genericarray\genericarray.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1584205420 source:c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1553976494 source:c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\utils\basicutils.c
+	"basicUtils.h"
+
+1553975816 source:c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\utils\fileutils.c
+	"fileUtils.h"
+
+1597354803 source:c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\words\word.c
+	"word.h"
+	"../utils/fileUtils.h"
+
+1597354977 source:c:\users\joseph mcconnell\desktop\summer\candunix\labs\lab10\genericarray\genericarray.c
+	"genericArray.h"
+	"../utils/basicUtils.h"
+
