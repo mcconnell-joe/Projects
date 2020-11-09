@@ -39,6 +39,8 @@ public class mainTest
 		
 		}while(playAgain());
 		
+		System.out.println("Thank you for playing!");
+		
 
 	}
 	
@@ -69,9 +71,16 @@ public class mainTest
 	{
 		Scanner kb = SingletonScanner.getScanner();
 		
-		System.out.println("Play again y/n?");
-		char again = kb.next().charAt(0);
-		kb.nextLine();
+		
+		char again;
+		do
+		{
+			System.out.println("Play again y/n?");
+			again = kb.next().charAt(0);
+			kb.nextLine();
+
+		}while(again != 'y' && again != 'Y' && again != 'n' && again != 'N');
+		
 		
 		return (again == 'Y' || again == 'y');
 	}

@@ -11,16 +11,4 @@ public class PlayerHero extends GameCharacter
 
 	}
 
-	public void upgrade()
-	{
-
-	}
-
-	public void displayAbilites()
-	{
-
-	}
-
-
-
 }
