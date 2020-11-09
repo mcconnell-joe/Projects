@@ -1,8 +1,8 @@
 # Projects
 ## This repository is designed to show several projects that display coding knowledge, ability, and understanding.
 ## **Solo Projects**
-# **turnBased**
-turnBased is a text-based game that I am currently working on. I am implementing all the different design patterns and principals that I have learned thus far into one cohesive project. This project is far from finished; I am adding to it all the time. I have put this here to display my ability to incorporate all the tools and ideas I have learned into a project that is coded solely by me. I hope to make it into a complete command line game soon.
+# **TurnBased**
+TurnBased is a text-based game that I am currently working on. I am implementing all the different design patterns and principals that I have learned thus far into one cohesive project. This project is far from finished; I am adding to it all the time. I have put this here to display my ability to incorporate all the tools and ideas I have learned into a project that is coded solely by me. I hope to make it into a complete command line game soon.
 
 
 ## **School Projects**
