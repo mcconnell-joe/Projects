@@ -1,10 +1,10 @@
 # Projects
 ## This repository is designed to show several projects that display coding knowledge, ability, and understanding.
 # **Full Inheritance**
-Full Inheritance is a project that I worked on in school. This program is designed to test your ability to apply core coding principals focusing on Polymorphism and inheritance. 
+Full Inheritance is a project that I worked on in school. This program is designed to test ones ability to apply core coding principals; focusing on Polymorphism and inheritance. 
 
 I choose to display this project on my GitHub because it shows my understanding of polymorphism, and inheritance.
-It displays my coding style and shows my level of ability to incorporate a wide array of coding tools and classes.
+It displays my coding style and shows my level of ability to incorporate a wide array of coding tools.
 
 # **C Coding Final**
 
