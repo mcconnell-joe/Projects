@@ -14,12 +14,9 @@ public class mainTest
 	{
 		
 		//CREATE VARIABLES//
-		
-		
 		ArrayList<GameCharacter> heroes = new ArrayList<GameCharacter>();
 		EnemyTeamGenerator enemyTeamGenerator = new EnemyTeamGenerator();
 		GameManager gameManager = new GameManager();
-
 
 		do
 		{
@@ -41,7 +38,6 @@ public class mainTest
 		
 		System.out.println("Thank you for playing!");
 		
-
 	}
 	
 	public static void createTeam(ArrayList<GameCharacter> heroes)
@@ -52,7 +48,7 @@ public class mainTest
 		
 		do 
 		{
-			System.out.println("Pick the " + count +  " memeber of your party: ");
+			System.out.println("Pick the #" + count +  " memeber of your party: ");
 			System.out.println("Enter a 1 for a Knight:");
 			System.out.println("Enter a 2 for a Rouge: ");
 			System.out.println("Enter a 3 for a Mage: ");
@@ -70,7 +66,6 @@ public class mainTest
 	public static boolean playAgain()
 	{
 		Scanner kb = SingletonScanner.getScanner();
-		
 		
 		char again;
 		do

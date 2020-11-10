@@ -1,31 +1,75 @@
 package Factories;
 
+import java.util.Scanner;
+
 import turnBasedCharacters.Knight;
 import turnBasedCharacters.Mage;
 import turnBasedCharacters.PlayerHero;
 import turnBasedCharacters.Rouge;
+import turnBasedRPG.SingletonScanner;
 
 public class HeroFactory
 {
+	private static int KNIGHT = 1;
+	private static int ROUGE = 2;
+	private static int MAGE = 3;
 
 	public PlayerHero getHero(int choice)
 	{
-		if(choice == 1)
+		String name;
+		Scanner kb = SingletonScanner.getScanner();
+		if(choice == KNIGHT)
 		{
-			Knight knight = new Knight("Sir Reginald", 0);
-			System.out.println(knight.getName() + " the " + knight.getType() + " was just added to your party!");
+			Knight knight;
+			System.out.println("What shall your knight be called? ");
+			name = kb.nextLine();
+			if(name.trim() == null || name.trim().isEmpty())
+			{
+				knight = new Knight("Sir Reginald The Brave", 100, 55, 8, 15);
+			}
+			else
+			{
+				knight = new Knight(name, 100, 55, 8, 15);
+			}
+			
+			System.out.println(knight.getName() + " the knight was just added to your party!");
 			return knight;
 		}
-		else if(choice == 2)
+		else if(choice == ROUGE)
 		{
-			Rouge rouge = new Rouge("Sneaky Boy", 0);
-			System.out.println(rouge.getName() + " the " + rouge.getType() + " was just added to your party!");
+			Rouge rouge;
+			System.out.println("What shall your rouge be called? ");
+			name = kb.nextLine();
+			
+			if(name.trim() == null || name.trim().isEmpty())
+			{
+				rouge = new Rouge("Mr Sneaky Stabby", 100, 55, 8, 15);
+			}
+			else
+			{
+				rouge = new Rouge(name, 100, 55, 8, 15);
+			}
+			
+			
+			System.out.println(rouge.getName() + " the rouge was just added to your party!");
 			return rouge;
 		}
-		else if(choice == 3)
+		else if(choice == MAGE)
 		{
-			Mage mage = new Mage("Magic Man", 0);
-			System.out.println(mage.getName() + " the " + mage.getType() + " was just added to your party!");
+			System.out.println("What shall your mage be called? ");
+			name = kb.nextLine();
+			Mage mage;
+			
+			if(name.trim() == null || name.trim().isEmpty())
+			{
+				mage = new Mage("Magic Man", 75, 70, 10, 19);
+			}
+			else
+			{
+				mage = new Mage(name, 75, 70, 10, 19);
+			}
+			
+			System.out.println(mage.getName() + " the mage was just added to your party!");
 			return mage;
 		}
 		else

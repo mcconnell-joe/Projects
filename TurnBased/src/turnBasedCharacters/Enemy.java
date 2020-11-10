@@ -2,9 +2,10 @@ package turnBasedCharacters;
 
 public class Enemy extends GameCharacter
 {
-	public Enemy(String name, int level)
+	public Enemy(String name, int health, int hitChance, int minDmg, int maxDmg)
 	{
-		super(name, level);
+		super(name, health, hitChance, minDmg, maxDmg);
+		this.setType("Enemy");
 	}
 
 

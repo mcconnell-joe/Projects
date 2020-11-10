@@ -1,14 +1,15 @@
 package turnBasedCharacters;
 
-public class PlayerHero extends GameCharacter
+public abstract class PlayerHero extends GameCharacter
 {
-	private double experience;
 
-
-	public PlayerHero(String name, int level)
+	public PlayerHero(String name, int health, double hitChance, int minDmg, int maxDmg)
 	{
-		super(name, level);
-
+		super(name, health, hitChance, minDmg, maxDmg);
+		// TODO Auto-generated constructor stub
 	}
-
+	
+	
+	
 }
+

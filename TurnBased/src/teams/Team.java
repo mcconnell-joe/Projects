@@ -1,12 +1,13 @@
 package teams;
 import java.util.ArrayList;
+import java.util.Random;
 
 import turnBasedCharacters.GameCharacter;
 
 public class Team
 {
 	private ArrayList<GameCharacter> team;
-	private double teamHealth;
+	private int teamHealth;
 
 	public Team(ArrayList<GameCharacter> team)
 	{
@@ -18,11 +19,11 @@ public class Team
 		return team.size();
 	}
 
-	public double getTeamHealth()
+	public int getTeamHealth()
 	{
 		for(int x = 0; x < team.size(); ++x)
 		{
-			teamHealth += team.get(x).getHealth();
+			this.teamHealth += team.get(x).getHealth();
 		}
 
 		return this.teamHealth;
@@ -59,8 +60,17 @@ public class Team
 
 		return team.get(min);
 	}
+	
+	public GameCharacter getRandom()
+	{
+		Random rand = new Random();
+		int random = rand.nextInt(this.team.size() + 1);
+		
+		return team.get(random);
+	}
+	
 
-	public int getAvgTeamLevel()
+	/*public int getAvgTeamLevel()
 	{
 		int teamLvl = 0;
 		for(int x = 0; x < team.size(); ++x)
@@ -71,6 +81,6 @@ public class Team
 
 		return teamLvl;
 
-	}
+	}*/
 
 }

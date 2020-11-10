@@ -17,7 +17,7 @@ public class EnemyTeamGenerator
 		ArrayList<GameCharacter> enemies = new ArrayList<GameCharacter>();
 		for(int x = 0; x < heroTeam.getTeamSize(); ++x)
 		{
-			enemies.add(new Enemy(names[rand.nextInt(11)], heroTeam.getAvgTeamLevel()));
+			enemies.add(new Enemy(names[rand.nextInt(11)], 100, 55, 10, 15));
 		}
 		enemies.trimToSize();
 		Team enemyTeam = new Team(enemies);
