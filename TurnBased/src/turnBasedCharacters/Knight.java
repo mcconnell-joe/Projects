@@ -42,6 +42,10 @@ public class Knight extends PlayerHero
 			}
 			
 		}
+		else
+		{
+			System.out.println(this.getName() + " missed his attemp at using a crushing blow on " + target.getName() + "!");
+		}
 	}
 	@Override
 	public void abilityTwo(ArrayList<GameCharacter> team)

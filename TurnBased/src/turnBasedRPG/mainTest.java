@@ -12,6 +12,7 @@ public class mainTest
 {
 	public static void main(String[] args)
 	{
+		Scanner kb = SingletonScanner.getScanner();
 		
 		//CREATE VARIABLES//
 		ArrayList<GameCharacter> heroes = new ArrayList<GameCharacter>();
@@ -38,6 +39,7 @@ public class mainTest
 		
 		System.out.println("Thank you for playing!");
 		
+		kb.close();
 	}
 	
 	public static void createTeam(ArrayList<GameCharacter> heroes)

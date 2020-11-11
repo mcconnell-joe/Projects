@@ -6,7 +6,7 @@ import teams.Team;
 import turnBasedCharacters.GameCharacter;
 public class GameManager
 {
-	Scanner kb = new Scanner(System.in);
+	Scanner kb = SingletonScanner.getScanner();
 
 	public void Battle(Team enemyTeam, Team heroTeam)
 	{
