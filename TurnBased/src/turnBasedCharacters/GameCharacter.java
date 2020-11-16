@@ -3,6 +3,7 @@ package turnBasedCharacters;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import teams.Team;
 import turnBasedRPG.SingletonScanner;
 
 public abstract class GameCharacter
@@ -30,83 +31,66 @@ public abstract class GameCharacter
 	
 	public void doDamage(int damage)
 	{
-		this.health -= damage;
+		if(damage < 0)
+		{
+			System.out.println("Damage must be positive");
+		}
+		else if(damage > 0)
+		{
+			this.health -= damage;
+			if(this.health < 0)
+			{
+				this.health = 0;
+			}
+		}
+		
 	}
 	//Notification and actions//
 	public boolean isDead()
 	{
 		return(this.health <= 0);
 	}
-	public void enemyAttack(GameCharacter target, ArrayList<GameCharacter> team)
+	//Target attack used for the enemy when they attack
+	public void targetAttack(GameCharacter target, ArrayList<GameCharacter> team)
 	{
 		boolean successfulAttack = Math.random() <= hitChance;
-		int damage = (int)(Math.random() * (maxDmg - minDmg + 1) + minDmg);
+		int damage = calDamage();
 		
 		if(successfulAttack)
 		{
 			target.doDamage(damage);
 			if(target.isDead())
 			{
-				System.out.println(this.getName() + " attacks " + target.getName() + " and does " + damage + " damage, killing them!");
+				System.out.println(this.getName() + "'s attack was a fatal blow! " 
+						+ target.getName() + " has been killed!\n");
 				team.remove(target);
 			}
 			else
 			{
-				System.out.println(this.getName() + " Attacks " + target.getName() + " and does " + damage + " damage, " 
-						+ target.getName() + " now has " + target.getHealth() + " health remaining!");
+				System.out.println("The attack was successful doing " + damage + "!");
+				System.out.println(target.getName() + " has " + target.health + " health remaining.\n");
 			}
 		}
 		else
 		{
-			System.out.println(this.getName() + " attempted to attack " + target.getName() + " and Missed!");
-		}	
-		
-	}
-	
-	public void attack(ArrayList<GameCharacter> team)
-	{
-		boolean successfulAttack;
-		int damage, choice = displayTargets(team);
-		GameCharacter target = team.get(choice);
-		
-		successfulAttack = Math.random() <= hitChance;
-		
-		if(successfulAttack)
-		{
-			damage = (int)(Math.random() * (maxDmg - minDmg + 1) + minDmg);
-			target.doDamage(damage);
-			
-			if(target.isDead())
-			{
-				System.out.println(this.getName() + " attacks " + target.getName() + " and does " + damage + " damage, killing them!");
-				team.remove(target);
-			}
-			else
-			{
-				System.out.println(this.getName() + " Attacks " + target.getName() + " and does " + damage + " damage, " 
-						+ target.getName() + " now has " + target.getHealth() + " health remaining!");
-			}
-			
+			System.out.println(this.getName() + " misses the attack!\n");
 		}
-		else
-		{
-			System.out.println(this.getName() + " attempted to attack " + target.getName() + " and Missed!");
-		}	
-	}
-	public void displayAbilites()
-	{
 		
 	}
-	public void abilityOne(ArrayList<GameCharacter> team)
+	//Typical attack for heroes, it then calls target attack after getting the target from user input
+	public void attack(Team team)
 	{
+		ArrayList<GameCharacter> teamA = team.getTeamArray();
+		int choice = displayTargets(teamA);
+		GameCharacter target = teamA.get(choice);
 		
+		targetAttack(target, team.getTeamArray());
 	}
 	
-	public void abilityTwo(ArrayList<GameCharacter> team)
-	{
-		
-	}
-	
+	public abstract void abilityOne(ArrayList<GameCharacter> team);
+	public abstract void abilityTwo(ArrayList<GameCharacter> team);
+	public abstract void displayAbilites();
+	//This method displays all choices to attack in a team ArrayList
 	public static int displayTargets(ArrayList<GameCharacter> team)
 	{	
 		Scanner kb = SingletonScanner.getScanner();

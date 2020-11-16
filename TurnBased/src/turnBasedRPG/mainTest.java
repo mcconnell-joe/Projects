@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import Factories.HeroFactory;
-import teams.EnemyTeamGenerator;
 import teams.Team;
 import turnBasedCharacters.GameCharacter;
 
@@ -16,7 +15,6 @@ public class mainTest
 		
 		//CREATE VARIABLES//
 		ArrayList<GameCharacter> heroes = new ArrayList<GameCharacter>();
-		EnemyTeamGenerator enemyTeamGenerator = new EnemyTeamGenerator();
 		GameManager gameManager = new GameManager();
 
 		do
@@ -27,18 +25,14 @@ public class mainTest
 		
 		System.out.print("\n");
 		System.out.println("You've successfully created a team!\n");
-
 		heroes.trimToSize();
 		Team heroTeam = new Team(heroes);
-		Team enemyTeam = enemyTeamGenerator.createEnemyTeam(heroTeam);
 		
 		//Initiate a battle between the Hero and Enemy Teams
-		gameManager.Battle(enemyTeam, heroTeam);
-		
+		gameManager.Battle(heroTeam);
 		}while(playAgain());
 		
 		System.out.println("Thank you for playing!");
-		
 		kb.close();
 	}
 	
@@ -62,9 +56,7 @@ public class mainTest
 			}
 		}while(count < 4);
 	}
-		
 
-	
 	public static boolean playAgain()
 	{
 		Scanner kb = SingletonScanner.getScanner();

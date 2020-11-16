@@ -48,7 +48,7 @@ public class Mage extends PlayerHero
 		for(int x = 0; x < team.size(); ++x)
 		{
 			target = team.get(x);
-			successfulHit = Math.random() <= (this.getChanceToHit() *.9);
+			successfulHit = Math.random() <= (this.getChanceToHit());
 			damage = (int)(this.calDamage() * .75);
 			if(successfulHit)
 			{

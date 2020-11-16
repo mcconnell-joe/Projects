@@ -23,7 +23,7 @@ public class Rouge extends PlayerHero
 		int choice = GameCharacter.displayTargets(team);
 		int damage = this.calDamage() * 2;
 		GameCharacter target = team.get(choice);
-		boolean successfulHit = (Math.random() <= this.getChanceToHit() * .55);
+		boolean successfulHit = (Math.random() <= this.getChanceToHit() * .65);
 		
 		if(successfulHit)
 		{

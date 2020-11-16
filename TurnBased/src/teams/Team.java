@@ -64,7 +64,7 @@ public class Team
 	public GameCharacter getRandom()
 	{
 		Random rand = new Random();
-		int random = rand.nextInt(this.team.size() + 1);
+		int random = rand.nextInt(this.team.size());
 		
 		return team.get(random);
 	}

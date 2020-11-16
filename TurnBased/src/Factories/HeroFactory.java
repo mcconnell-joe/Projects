@@ -25,11 +25,11 @@ public class HeroFactory
 			name = kb.nextLine();
 			if(name.trim() == null || name.trim().isEmpty())
 			{
-				knight = new Knight("Sir Reginald The Brave", 100, .55, 7, 14);
+				knight = new Knight("Sir Reginald The Brave", 125, .65, 8, 18);
 			}
 			else
 			{
-				knight = new Knight(name, 100, .55, 7, 14);
+				knight = new Knight(name, 125, .65, 8, 18);
 			}
 			
 			System.out.println(knight.getName() + " the knight was just added to your party!");
@@ -43,11 +43,11 @@ public class HeroFactory
 			
 			if(name.trim() == null || name.trim().isEmpty())
 			{
-				rouge = new Rouge("Mr Sneaky Stabby", 100, .65, 8, 16);
+				rouge = new Rouge("Mr Sneaky Stabby", 100, .655, 9, 19);
 			}
 			else
 			{
-				rouge = new Rouge(name, 100, .65, 8, 16);
+				rouge = new Rouge(name, 100, .655, 9, 19);
 			}
 			
 			
@@ -62,11 +62,11 @@ public class HeroFactory
 			
 			if(name.trim() == null || name.trim().isEmpty())
 			{
-				mage = new Mage("Magic Man", 75, .75, 6, 12);
+				mage = new Mage("Magic Man", 75, .75, 10, 18);
 			}
 			else
 			{
-				mage = new Mage(name, 75, .75, 10, 19);
+				mage = new Mage(name, 75, .75, 10, 18);
 			}
 			
 			System.out.println(mage.getName() + " the mage was just added to your party!");

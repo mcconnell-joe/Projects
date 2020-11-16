@@ -17,13 +17,14 @@ public class Knight extends PlayerHero
 		System.out.println("1) Attack");
 		System.out.println("2) Crushing Blow");
 	}
+	
 
 	@Override
 	public void abilityOne(ArrayList<GameCharacter> team)
 	{
 		int choice = GameCharacter.displayTargets(team);
 		GameCharacter target = team.get(choice);
-		int damage = (int)(this.calDamage() * 1.5);
+		int damage = (int)(this.calDamage() * 2);
 		boolean successfulHit = Math.random() <= this.getChanceToHit() * .6;
 		
 		if(successfulHit)
@@ -44,7 +45,7 @@ public class Knight extends PlayerHero
 		}
 		else
 		{
-			System.out.println(this.getName() + " missed his attemp at using a crushing blow on " + target.getName() + "!");
+			System.out.println(this.getName() + " missed his attempt at using a crushing blow!");
 		}
 	}
 	@Override

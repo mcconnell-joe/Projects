@@ -2,14 +2,18 @@ package turnBasedRPG;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import teams.EnemyTeamGenerator;
 import teams.Team;
 import turnBasedCharacters.GameCharacter;
 public class GameManager
 {
 	Scanner kb = SingletonScanner.getScanner();
 
-	public void Battle(Team enemyTeam, Team heroTeam)
+	public void Battle(Team heroTeam)
 	{
+		EnemyTeamGenerator enemyTeamGenerator = new EnemyTeamGenerator();
+		Team enemyTeam = enemyTeamGenerator.createEnemyTeam(heroTeam);
+		
 		//Get the arrayList from each team
 		ArrayList<GameCharacter> heroes = heroTeam.getTeamArray();
 		ArrayList<GameCharacter> baddies = enemyTeam.getTeamArray();
@@ -31,17 +35,16 @@ public class GameManager
 					ability = Integer.parseInt(kb.nextLine());
 				}while(ability < 1 || ability > 3);
 				
-				callAbility(ability, hero, baddies, heroes);
+				callAbility(ability, hero, enemyTeam, heroTeam);
 	
 			}
+			
 			System.out.println("\n");
 			//Have the enemy team attack the lowest health hero
 			for(int y = 0; y < baddies.size(); y++)
 			{
-				GameCharacter target = heroTeam.getLowestHealth();
 				GameCharacter attacker = baddies.get(y);
-				
-				attacker.enemyAttack(target, heroes);
+				attacker.attack(heroTeam);
 			}
 			
 			
@@ -50,7 +53,7 @@ public class GameManager
 		System.out.println("You won the battle!");
 	}
 	
-	public static void callAbility(int ability, GameCharacter hero, ArrayList<GameCharacter> enemies, ArrayList<GameCharacter> heroes)
+	public static void callAbility(int ability, GameCharacter hero, Team enemies, Team heroes)
 	{
 		if(ability == 1)
 		{
@@ -60,17 +63,17 @@ public class GameManager
 		{
 			if(hero.getType() == "Mage")
 			{
-				hero.abilityOne(heroes);
+				hero.abilityOne(heroes.getTeamArray());
 			}
 			else
 			{
-				hero.abilityOne(enemies);
+				hero.abilityOne(enemies.getTeamArray());
 			}
 			
 		}
 		else if(ability == 3)
 		{
-			hero.abilityTwo(enemies);
+			hero.abilityTwo(enemies.getTeamArray());
 		}
 		else
 		{
@@ -78,5 +81,5 @@ public class GameManager
 		}
 			
 	}
-
 }
+	
