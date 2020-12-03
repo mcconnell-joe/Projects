@@ -85,13 +85,7 @@ public class Fraction implements Comparable<Fraction>
 	
 	public boolean equals(Object o)
 	{
-		Fraction frac = (Fraction)o;
-		
-		if(this.num == frac.num && this.den == frac.den)
-		{
-			return true;
-		}
-		
+
 		return false;
 	}
 	
@@ -108,24 +102,11 @@ public class Fraction implements Comparable<Fraction>
 	{
 
 		
-		int gcd = this.gcd(this.num, this.den);
-		
-		if(gcd < 0)
-		{
-			gcd *= -1;
-		}
-		
-		this.num /= gcd;
-		this.den /= gcd;
 	}
 	
 	public int gcd(int a, int b)
 	{
-		if(b == 0)
-		{
-			return a;
-		}
-		return gcd(b, a % b);
+	
 	}
 	
 	@Override
