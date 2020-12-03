@@ -100,8 +100,16 @@ public class Fraction implements Comparable<Fraction>
 	
 	public void simplify()
 	{
+		int gcd = this.gcd(this.num, this.den);
 
-		
+		if(gcd < 0)
+		{
+			gcd *= -1;
+		}
+
+		this.num /= gcd;
+		this.den /= gcd;
+
 	}
 	
 	public int gcd(int a, int b)
