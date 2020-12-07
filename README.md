@@ -1,9 +1,13 @@
 # Projects
 ## This repository is designed to show several projects that display coding knowledge, ability, and understanding.
 ## **Solo Projects**
+### Java
 # **TurnBased**
 TurnBased is a text-based game that I am currently working on. I am implementing all the different design patterns and principals that I have learned thus far into one cohesive project. This project is far from finished; I am adding to it all the time. I have put this here to display my ability to incorporate all the tools and ideas I have learned into a project that is coded solely by me. I hope to make it into a complete command line game soon.
 
+### JavaScript + HTML / CSS
+# Guess My Number
+This JavaScript project displays a simple little game in an easy to read and intresting way. This program generates a random number(1-100) then gets the user to guess the number. Based off the user guess messages are displayed if the the guess is too high, low or not in range. This project shows a basic understanding of JavaScript, HTML, and CSS.
 
 ## **School Projects**
 # **Full Inheritance**
