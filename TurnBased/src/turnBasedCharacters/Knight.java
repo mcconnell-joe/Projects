@@ -2,6 +2,8 @@ package turnBasedCharacters;
 
 import java.util.ArrayList;
 
+import status.Stun;
+
 public class Knight extends PlayerHero
 {
 
@@ -16,6 +18,7 @@ public class Knight extends PlayerHero
 	{
 		System.out.println("1) Attack");
 		System.out.println("2) Crushing Blow");
+		System.out.println("3) Stunning Smack");
 	}
 	
 
@@ -51,7 +54,18 @@ public class Knight extends PlayerHero
 	@Override
 	public void abilityTwo(ArrayList<GameCharacter> team)
 	{
-		System.out.println("No ability 2 yet! Coming Soon!");
+		int tics = 1;
+		int choice = GameCharacter.displayTargets(team);
+		GameCharacter target = team.get(choice);
+		boolean successfulHit = Math.random() <= this.getChanceToHit() * .75;
+		
+		if(successfulHit) {
+			target.statusMg.addStatus(new Stun(tics, target));
+			System.out.println(this.getName() + " has successfully stunned " + target.getName() + " for " + tics + " turns.");
+		}
+		else {
+			System.out.println(this.getName() + " failed to stun " + target.getName() + ".");
+		}
 	}
 
 

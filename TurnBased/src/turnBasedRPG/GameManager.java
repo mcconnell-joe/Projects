@@ -20,22 +20,44 @@ public class GameManager
 
 		System.out.println("You've entered a BATTLE!\n");
 		
+		//Run while each team has at least one team member alive
 		while(!enemyTeam.teamDead() && !heroTeam.teamDead())
 		{
 			for(int x = 0; x < heroes.size(); ++x)
 			{
-				GameCharacter hero = heroes.get(x);
-				System.out.println("It's " + hero.getName() + " the " + hero.getType() + "'s turn!");
-				System.out.println(hero.getName() + "'s abilites are: ");
-				hero.displayAbilites();
-				int ability;
-				do 
+				if(enemyTeam.teamDead())
 				{
-					System.out.println("Enter ability choice: ");
-					ability = Integer.parseInt(kb.nextLine());
-				}while(ability < 1 || ability > 3);
-				
-				callAbility(ability, hero, enemyTeam, heroTeam);
+					break;
+				}
+				GameCharacter hero = heroes.get(x);
+				hero.getStatusManager().checkStatuses();
+				if(hero.getCanAttack()) {
+					System.out.println("It's " + hero.getName() + " the " + hero.getType() + "'s turn!");
+					System.out.println(hero.getName() + "'s abilites are: ");
+					hero.displayAbilites();
+					int ability;
+					do 
+					{
+						System.out.println("Enter ability choice: ");
+						ability = Integer.parseInt(kb.nextLine());
+					}while(ability < 1 || ability > 3);
+					
+					callAbility(ability, hero, enemyTeam, heroTeam);
+				}
+				else {
+					hero.getStatusManager().checkStatuses();
+				}
+//				System.out.println("It's " + hero.getName() + " the " + hero.getType() + "'s turn!");
+//				System.out.println(hero.getName() + "'s abilites are: ");
+//				hero.displayAbilites();
+//				int ability;
+//				do 
+//				{
+//					System.out.println("Enter ability choice: ");
+//					ability = Integer.parseInt(kb.nextLine());
+//				}while(ability < 1 || ability > 3);
+//				
+//				callAbility(ability, hero, enemyTeam, heroTeam);
 	
 			}
 			
@@ -44,7 +66,14 @@ public class GameManager
 			for(int y = 0; y < baddies.size(); y++)
 			{
 				GameCharacter attacker = baddies.get(y);
-				attacker.attack(heroTeam);
+				if(attacker.getCanAttack()) {
+					attacker.getStatusManager().checkStatuses();
+					attacker.attack(heroTeam);
+				}
+				else {
+					attacker.getStatusManager().checkStatuses();
+				}
+				
 			}
 			
 			

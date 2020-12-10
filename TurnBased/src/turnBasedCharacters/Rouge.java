@@ -2,6 +2,8 @@ package turnBasedCharacters;
 
 import java.util.ArrayList;
 
+import status.Poison;
+
 public class Rouge extends PlayerHero
 {
 	
@@ -16,6 +18,7 @@ public class Rouge extends PlayerHero
 	{
 		System.out.println("1) Attack");
 		System.out.println("2) BackStab");
+		System.out.println("3) Poison Enemy");
 	}
 	@Override
 	public void abilityOne(ArrayList<GameCharacter> team)
@@ -48,6 +51,22 @@ public class Rouge extends PlayerHero
 	@Override
 	public void abilityTwo(ArrayList<GameCharacter> team)
 	{
-		System.out.println("No ability 2 yet! Coming Soon!");
+		int tics = 5;
+		int choice = GameCharacter.displayTargets(team);
+		double damage = this.calDamage() * .25;
+		GameCharacter target = team.get(choice);
+		boolean successfulHit = (Math.random() <= this.getChanceToHit());
+		
+		if(successfulHit)
+		{
+			target.statusMg.addStatus(new Poison(tics, target, (int)damage, team));
+			System.out.println(this.getName() + " has successfully poisoned " + target.getName() + " for " + tics + " turns");
+		}
+		else
+		{
+			System.out.println(this.getName() + " has failed to poison " + target.getName());
+		}
 	}
-}
+	
+	
+}	

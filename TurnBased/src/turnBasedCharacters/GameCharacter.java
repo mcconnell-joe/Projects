@@ -3,6 +3,7 @@ package turnBasedCharacters;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import status.StatusManager;
 import teams.Team;
 import turnBasedRPG.SingletonScanner;
 
@@ -13,7 +14,9 @@ public abstract class GameCharacter
 	private String type;
 	private double hitChance;
 	private int minDmg, maxDmg;
-
+	protected StatusManager statusMg;
+	protected boolean canAttack = true;
+	
 	public GameCharacter(String name, int health, double hitChance, int minDmg, int maxDmg)
 	{
 		this.name = name;
@@ -21,6 +24,7 @@ public abstract class GameCharacter
 		this.hitChance = hitChance;
 		this.minDmg = minDmg;
 		this.maxDmg = maxDmg;
+		this.statusMg = new StatusManager();
 	}
 
 	//Healing method for Mage and various monsters
@@ -142,12 +146,23 @@ public abstract class GameCharacter
 	{
 		return (int)((Math.random() * (maxDmg - minDmg + 1) + minDmg));
 	}
-	
+	public boolean getCanAttack()
+	{
+		return canAttack;
+	}
+	public StatusManager getStatusManager()
+	{
+		return this.statusMg;
+	}
+
 
 	//SETTERS//
 	public void setType(String type)
 	{
 		this.type = type;
+	}
+	public void setCanAttack(boolean bool) {
+		this.canAttack = bool;
 	}
 
 	
