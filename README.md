@@ -1,7 +1,7 @@
 # Projects
 ## This repository is designed to show several projects that display coding knowledge, ability, and understanding.
 
-#Personal Resume Website: http://www.mcconnell-joseph.com.s3-website-us-west-2.amazonaws.com/
+## Personal Resume Website: http://www.mcconnell-joseph.com.s3-website-us-west-2.amazonaws.com/
 # **Solo Projects**
 
 ## Java
