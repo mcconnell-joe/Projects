@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cornsilk;
+}
+
+.main-title {
+  padding: 12px;
+  background-color: black;
+  color: azure;
+  text-align: center;
+  border-style: dashed;
+  width: 1250px;
+  margin-left: 325px;
+  border-color: coral;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  font-size: 55px;
+}
+
+.contact {
+  border-style: dashed;
+  width: 375px;
+  text-align: center;
+  background-color: black;
+  border-color: coral;
+  color: azure;
+  padding: 10px;
+  margin-left: 325px;
+  font-size: 18px;
+}
+
+.links {
+  border-style: dashed;
+  width: 500px;
+  text-align: center;
+  background-color: black;
+  border-color: coral;
+  color: azure;
+  padding: 10px;
+  margin-left: 374px;
+}
+
+form {
+  display: inline-block;
+}
+
+.top-form-holder {
+  display: inline-block;
+}
+
+.main-form {
+  background-color: black;
+  border-style: dashed;
+  border-color: coral;
+  color: aliceblue;
+  margin-top: 25px;
+  width: 1250px;
+  margin-left: 325px;
+  padding: 15px;
+}
+
+.title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.sub-heading-top {
+  padding: 5px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sub-heading {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.resume-heading {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
