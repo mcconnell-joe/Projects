@@ -9,7 +9,7 @@ public class Poison extends Status
 	private int damage;
 	private ArrayList<GameCharacter> team;
 	
-	public Poison(int tics, GameCharacter target, int damage, ArrayList team)
+	public Poison(int tics, GameCharacter target, int damage, ArrayList<GameCharacter> team)
 	{
 		super(tics + 1, target);
 		this.damage = damage;

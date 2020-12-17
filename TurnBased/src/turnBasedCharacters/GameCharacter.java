@@ -16,6 +16,8 @@ public abstract class GameCharacter
 	private int minDmg, maxDmg;
 	protected StatusManager statusMg;
 	protected boolean canAttack = true;
+	protected int level;
+	protected int experience;
 	
 	public GameCharacter(String name, int health, double hitChance, int minDmg, int maxDmg)
 	{
@@ -27,12 +29,12 @@ public abstract class GameCharacter
 		this.statusMg = new StatusManager();
 	}
 
-	//Healing method for Mage and various monsters
+	//Healing method for Mage
 	public void heal(int heal)
 	{
 		this.health += heal;
 	}
-	
+	//Does damage to the designated GameCharacter
 	public void doDamage(int damage)
 	{
 		if(damage < 0)
@@ -47,7 +49,6 @@ public abstract class GameCharacter
 				this.health = 0;
 			}
 		}
-		
 	}
 	//Notification and actions//
 	public boolean isDead()
@@ -79,18 +80,17 @@ public abstract class GameCharacter
 		{
 			System.out.println(this.getName() + " misses the attack!\n");
 		}
-		
 	}
 	//Typical attack for heroes, it then calls target attack after getting the target from user input
 	public void attack(Team team)
 	{
 		ArrayList<GameCharacter> teamA = team.getTeamArray();
 		int choice = displayTargets(teamA);
+		System.out.println("");
 		GameCharacter target = teamA.get(choice);
-		
 		targetAttack(target, team.getTeamArray());
 	}
-	
+	//Abstract methods that all GameCharacter will Override if they have abilites
 	public abstract void abilityOne(ArrayList<GameCharacter> team);
 	public abstract void abilityTwo(ArrayList<GameCharacter> team);
 	public abstract void displayAbilites();
@@ -121,7 +121,6 @@ public abstract class GameCharacter
 		return choice;
 	}
 
-	
 	//GETTERS//
 	public String getType()
 	{
@@ -154,8 +153,6 @@ public abstract class GameCharacter
 	{
 		return this.statusMg;
 	}
-
-
 	//SETTERS//
 	public void setType(String type)
 	{

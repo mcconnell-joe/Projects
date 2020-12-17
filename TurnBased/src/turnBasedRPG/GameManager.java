@@ -40,6 +40,7 @@ public class GameManager
 					{
 						System.out.println("Enter ability choice: ");
 						ability = Integer.parseInt(kb.nextLine());
+						System.out.println("");
 					}while(ability < 1 || ability > 3);
 					
 					callAbility(ability, hero, enemyTeam, heroTeam);
@@ -47,17 +48,6 @@ public class GameManager
 				else {
 					hero.getStatusManager().checkStatuses();
 				}
-//				System.out.println("It's " + hero.getName() + " the " + hero.getType() + "'s turn!");
-//				System.out.println(hero.getName() + "'s abilites are: ");
-//				hero.displayAbilites();
-//				int ability;
-//				do 
-//				{
-//					System.out.println("Enter ability choice: ");
-//					ability = Integer.parseInt(kb.nextLine());
-//				}while(ability < 1 || ability > 3);
-//				
-//				callAbility(ability, hero, enemyTeam, heroTeam);
 	
 			}
 			
@@ -82,6 +72,7 @@ public class GameManager
 		System.out.println("You won the battle!");
 	}
 	
+	//Ensures that the correct abilty is called for each hero
 	public static void callAbility(int ability, GameCharacter hero, Team enemies, Team heroes)
 	{
 		if(ability == 1)
