@@ -1,8 +1,11 @@
 # Projects
 ## This repository is designed to show several projects that display coding knowledge, ability, and understanding.
 
-## Personal Resume Website: http://www.joseph-mcconnell.com
 # **Solo Projects**
+
+## Personal 'About Me' Website: http://www.joseph-mcconnell.com
+
+This project is a simply designed website created to display my JavaScript, HTML, and CSS skill and projects. This site contains a quick about me section displaying a blurb describing me. There is a section for my contact, links (Git, LinkedIn), a link to my resume, and a personal projects section. Within personal projects all my finished JavaScript projects are linked and hosted on this website. Each game is playable in the browser. This is hosted through AWS (Amazon Web Services) I did buy a domain to make it more presentable. 
 
 ## Java
 ### **TurnBased**
@@ -17,7 +20,6 @@ This JavaScript project displays a simple game with a dynamic GUI. This program 
 ### Dice Game
 
 This is another JavaScript project focused on a simple game with a unique GUI to display the information. This is a two-player game focused on a dice roll, a random number between 1-6 is generated and the correct picture of the dice is displayed corresponding with that number. The goal is to get to 50 points, you roll the dice, anything but a one adds to your current score, if you get a one you lose all those points and it is the other user's turn. You add points to your actual total by pressing 'hold' this keeps all your current points and adds them to your total. This project also shows ability in JavaScript, HTML, and CSS.
-
 
 
 
