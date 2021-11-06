@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/projects/javascript/Geo-Reach/pic/favi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/projects/javascript/Geo-Reach/pic/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/projects/javascript/Geo-Reach/pic/favi/favicon-16x16.png">
+    <link rel="manifest" href="/projects/javascript/Geo-Reach/pic/favi/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Styles  -->
+    <link rel="stylesheet" href="/projects/javascript/Geo-Reach/styles/main-styles.css">
+    <!--  Font Connect-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Forum&family=Nunito:wght@400;600;700&display=swap&family=Montserrat:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- SWEET ALERT SCRIPT CONNECT-->
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <!--  LeafLet Script-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer src="/projects/javascript/Geo-Reach/scripts/script.js"></script>
+    <title>Geo-Reach--Make Your Own Path.</title>
+</head>
+
+<body>
+    <div class="exercises-sidebar">
+        <img src="/projects/javascript/Geo-Reach/pic/logo(1).png" alt="logo" class="logo">
+
+        <ul class="exercises">
+            <form class="form hidden">
+                <div class="form-row">
+                    <label class="form-label">Type</label>
+                    <select class="form-input input-type">
+                        <option value="running">Running</option>
+                        <option value="cycling">Cycling</option>
+                        <option value="hiking">Hiking</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="form-label"">Distance</label>
+                    <input class="form-input input-distance" placeholder="mi">
+                </div>
+                <div class="form-row">
+                    <label class="form-label"">Duration</label>
+                    <input class="form-input input-duration" placeholder="min">
+                </div>
+                <div class="form-row ">
+                    <label class="form-label"">Cadence</label>
+                    <input class="form-input input-cadence" placeholder="step/min">
+                </div>
+                <div class="form-row form-row-hidden">
+                    <label class="form-label"">Elev-Dif</label>
+                    <input class="form-input input-elevation" placeholder="feet">
+                </div>
+                <button class="form-button">OK</button>
+            </form>
+
+            <!-- <li class="exercise exercise-running" data-id="1234567890">
+                <h2 class="exercise-title">Running on April 14</h2>
+                <div class="exercise-details">
+                    <span class="exercise-icon">🏃‍♂️</span>
+                    <span class="exercise-value">5.2</span>
+                    <span class="exercise-unit">km</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">⏱</span>
+                    <span class="exercise-value">24</span>
+                    <span class="exercise-unit">min</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">⚡️</span>
+                    <span class="exercise-value">4.6</span>
+                    <span class="exercise-unit">min/km</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">🦶🏼</span>
+                    <span class="exercise-value">178</span>
+                    <span class="exercise-unit">spm</span>
+                </div>
+            </li>
+
+            <li class="exercise exercise-cycling" data-id="1234567891">
+                <h2 class="exercise-title">Cycling on April 5</h2>
+                <div class="exercise-details">
+                    <span class="exercise-icon">🚴‍♀️</span>
+                    <span class="exercise-value">27</span>
+                    <span class="exercise-unit">km</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">⏱</span>
+                    <span class="exercise-value">95</span>
+                    <span class="exercise-unit">min</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">⚡️</span>
+                    <span class="exercise-value">16</span>
+                    <span class="exercise-unit">mi/h</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">🗻</span>
+                    <span class="exercise-value">223</span>
+                    <span class="exercise-unit">m</span>
+                </div>
+            </li> 
+            
+            <li class="exercise exercise-hikeing" data-id="1234567891">
+                <h2 class="exercise-title">Cycling on April 5</h2>
+                <div class="exercise-details">
+                    <span class="exercise-icon">🎒</span>
+                    <span class="exercise-value">27</span>
+                    <span class="exercise-unit">km</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">⏱</span>
+                    <span class="exercise-value">95</span>
+                    <span class="exercise-unit">min</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">⚡️</span>
+                    <span class="exercise-value">16</span>
+                    <span class="exercise-unit">mi/h</span>
+                </div>
+                <div class="exercise-details">
+                    <span class="exercise-icon">🗻</span>
+                    <span class="exercise-value">223</span>
+                    <span class="exercise-unit">m</span>
+                </div>
+            </li>
+        -->
+        </ul>
+
+        <p class="copyright">
+            &copy; Copyright by <a class="foot-link" target="_blank" href="http://www.joseph-mcconnell.com">Joseph
+                McConnell</a>. Thank you for
+            having a look, inspired by the work of Jonas Schmedtmann
+        </p>
+    </div>
+    <div id="map">
+        <div class="reset"><a id="reset-link" href="#">Reset</a>
+        </div>
+    </div>
+</body>
+
+</html>

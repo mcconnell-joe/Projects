@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/pic/favicon/new-favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/pic/favicon/new-favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/pic/favicon/new-favicon/favicon-16x16.png">
+        <link rel="manifest" href="/pic/favicon/new-favicon/site.webmanifest">
+        <link rel="mask-icon" href="/pic/favicon/new-favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" href="/main-style.css">
+    <link rel="stylesheet" href="/header-footer/header-footer.css">
+    <link rel="stylesheet" href="/projects/project-style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Joseph McConnell-Projects</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a class="top-nav" href="/index.html">Home</a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="/doc/mcconnell-j-resume.pdf" target="_blank">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link show-contact-modal" href="#section-2">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects/projects.html">Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-title-project">
+        <h1 class="title">Projects </h1>
+    </div>
+
+    <main class="main">
+        <h2 class="title-note">*Click on the LINK button to test it out*</h2>
+        <div class="project-div project-1">
+            <h2 class="project-title" id="text-title">Turn Based: Command Line RPG<a class="project-link" href="https://github.com/mcconnell-joe/Projects/tree/main/TurnBased" target="_blank">LINK</a>  </h2>
+            <h3 class="project-sub-title">Languages: Java</h3>
+            <div class="project-summary-div">
+                <h4 class="project-summary-title">Importance:</h4>
+                <p class="summary-body">
+                    This project details my ability to create well designed and refactored object-oriented code. Showing my implementation of design patterns and well planned classes. It displays principals of inheritance, encapsulation, and abstraction. 
+                </p>
+                <h4 class="project-summary-title">Summary: </h4>
+                <p class="summary-body">This is the first project I have worked on. I have learned a lot doing it and it has been a fun process. It's a text-based RPG game that consists of multiple character and enemy types. The user creates their team picking from multiple hero types then battle against different random enemies. Each hero and enemy type are equipped with different skills and attack patterns. The most challenging part of this project was implementing a status effect system that allows for damage over time and stunning statuses. This project has been on the back burner as of late. I am taking the time to learn other tools. I hope to come back soon and add a lot more functionality. 
+                </p>
+                <h4 class="project-summary-title">Key Features:</h4>
+                <ul class="key-features">
+                    <li>Team Creation: Factories are used for both hero and enemy teams..</li>
+                    <li>Ability System: Created characters, enemies and heroes with actions and abilities.</li>
+                    <li>OOP principals: Implemented polymorphism and abstraction to create a robust combat system.
+                    </li>
+                    <li>Status System: Added status system for abilities keeping track of duration, damage and effect
+                    </li>
+                    <li>Continued Development: This is a work in progress and I plan to add to it over my time in
+                        school.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-div project-2">
+            <div class="project-title">
+                <h2 > Banking App </h2>
+                <a class="project-link" href="/projects/javascript/simpleBankingApp/index.html" target="_blank">LINK</a>
+            </div>
+            
+            <h3 class="project-sub-title">Languages: JavaScript, HTML, CSS</h3>
+            <div class="project-summary-div">
+                <h4 class="project-summary-title">Importance:</h4>
+                <p class="summary-body">
+                    I've included this project because it displays DOM manipulation skills, CSS styling and dynamic data manipulation. This project implements Data Structures shown to the user and uses JavaScript to change the webpage based off that interaction.
+                </p>
+                <h4 class="project-summary-title">Summary: </h4>
+                <p class="summary-body">
+                    This was a culmination project of my point so far in my journey as a JavaScript developer. There are a lot of different tools employed here that work together. This project employs DOM manipulation, dynamic styling, user classes among other techniques. The user must log in with correct credentials (see below) in order to access the hidden features of the banking service. From there they have access to their transactions, pulling loans, closing accounts and transferring money. There are also several timing features employed to auto log out the user and add a delay before loans are approved. 
+                </p>
+                <h4 class="project-summary-title">Key Features:</h4>
+                <ul class="key-features">
+                    <li>Dom : Used JavaScript Dom manipulation to hide and display users bank transfers.</li>
+                    <li>Sorting: Users movements can be sorted with a button press</li>
+                    <li>Front-End: Used HTML and CSS for the user interface.</li>
+                    <li>Timing: Loan, error and account closures are all implemented using a timeout function.</li>
+                    <li>Login: user: jm pin: 1111 — user: jd pin: 2222</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-div project-3">
+            <h2 class="project-title" id="geo-title">Geo-Reach<a class="project-link" href="/projects/javascript/Geo-Reach/index.html" target="_blank">LINK</a></h2>
+            <h3 class="project-sub-title">Languages: JavaScript, HTML, CSS</h3>
+            <div class="project-summary-div">
+                <h4 class="project-summary-title">Importance:</h4>
+                <p class="summary-body">
+                    This project displays well refactored object-oriented code done in JavaScript. This project also displays API incorporation, documentation usage and functional implementation. 
+                </p>
+                <h4 class="project-summary-title">Summary: </h4>
+                <p class="summary-body">
+                    This is an exercise location planning application. The user 'clicks' a location on the map then chooses a type of exercise (Running, Cycling or Hiking). The user then enters the different information associated with the workout and it is added to the map and workout queue. The code is organized and implement using ES6 classes. Along with the classes I have chosen to implement inheritance using ES6 classes inphase of prototype assignment. I have also used the built-in local storage implementation to store user workouts.
+                </p>
+
+                <h4 class="project-summary-title">Key Features:</h4>
+                <ul class="key-features">
+                    <li>App Logic: The exercise pane is controlled solely by JavaScript.</li>
+                    <li>User-interface: Users interact with the keyboard and mouse events are handled with JS.</li>
+                    <li>Storage: The localStorage object is used to store user data</li>
+                    <li>Styling: Implemented using CSS and visual changes are done through JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-div project-4">
+            <h2 class="project-title">My Website</h2>
+            <h3 class="project-sub-title">Languages: JavaScript, HTML, CSS</h3>
+
+            <div class="project-summary-div">
+                <h4 class="project-summary-title">Importance:</h4>
+                <p class="summary-body">
+                    This website displays design, vanilla HTML, CSS and JavaScript.
+                </p>
+                <h4 class="project-summary-title">Summary: </h4>
+                <p class="summary-body"> This website has turned into my most cohesive project. It allows for easy access to the projects I have done in JavaScript. I have decided to stick with vanilla JavaScript, HTML and CSS. There have been many iterations already and likely many more to come. I hope you like it. 
+                </p>
+
+                <h4 class="project-summary-title">Key Features:</h4>
+                <ul class="key-features ">
+                    <liFront-End: Used HTML to create a dynamic landing page, with links, projects and contact info. 
+                    </li>
+                    <li>Projects: This is the platform I have chosen to display all my JavaScript projects</li>
+                    <li>Hosted: My website and code are all hosted on Amazon Web Services.</li>
+                    </li>
+                    <li>Continued Development: This is something I am always adding to as I learn new skills.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-div project-5">
+            <h2 class="project-title" id="guess-title">"Guess My Number!" and Dice Game<a class="project-link" href="/projects/javascript/GuessMyNumber/index.html" target="_blank">LINK</a><a class="project-link next-link" href="/projects/javascript/diceGame/index.html" target="_blank">LINK</a></h2>
+            <h3 class="project-sub-title">Languages: JavaScript, HTML, CSS</h3>
+            <div class="project-summary-div">
+                <h4 class="project-summary-title">Summary: </h4>
+                <p class="summary-body">
+                    Two simple small JavaScript games. Enjoy!
+                </p>
+            </div>
+        </div>
+
+
+        <div class="top">
+            <a class="top-link bottom-scroll"  href="#">&#11014 Back to top &#11014</a>
+        </div>
+    
+        <div class="modal hidden modal-about m">
+            <button class="close-modal-about close-modal">&times;</button>
+            <h1 class="modal-header">About:</h1>
+            <p>
+                I appreciate you taking the time to look around.
+                <br>
+                If you have any questions, feel free to reach out. I hope you have a chance to take a look at my projects.
+            </p>
+        </div>
+        
+        <div class="modal hidden modal-privacy m">
+            <button class="close-modal-privacy close-modal">&times;</button>
+            <h1 class="modal-header">Privacy Policy:</h1>
+            <p>
+                Designed and coded by Joseph McConnell.
+                <br>
+                Feel free to take inspiration, please do not use without permission.
+            </p>
+        </div>    
+
+
+    <div class="contact-modal hidden">
+        <button class="close-modal-contact">&times;</button>
+        <h1 class="modal-header">Contact Info:</h1>
+        <div class="contact-info">
+            <h2 class="modal-header-2">Email &nbsp &nbsp :&nbsp <a href="mailto: mcconnell.s.joseph@gmail.com"
+                    target="_blank">mcconnell.s.joseph@gmail.com</a></h2>
+            <h2>Phone &nbsp  : &nbsp &nbsp 509.869.2827</h2>
+        </div>
+        <hr id="contact-hr">
+        <div class="contact-links">
+            <p>
+                LinkedIn &nbsp : <a href="https://www.linkedin.com/in/mcconnell-joe/" target="_blank">LinkedIN</a>
+                <br>
+                GitHub &nbsp &nbsp &nbsp: <a href="https://github.com/mcconnell-joe/Projects" target="_blank">
+                    GitHub</a>
+            </p>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <a class="hidden" id="pop-up-top" href="">Back to top</a>
+    <footer class="footer bottom-scroll">
+        <ul class="footer-nav">
+            <li class="footer-item">
+                <a class="footer-link" id="about-nav" href="#section2">About</a>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link show-contact-modal" href="#section2">Contact</a>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link project-top" href="#section2">Projects</a>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link" id="privacy-nav" href="#section2">Privacy Policy</a>
+            </li>
+        </ul>
+        <img src="/pic/floppy.png" alt="temp-logo" class="footer-logo">
+        <p class="footer-copyright">
+            &copy; Copyright by <span class="foot-name">Joseph McConnell</span> 
+        </p>
+    </footer>
+
+    <script src="/scripts/script-projects.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+
+:root{
+    --color-nav: #2d3047;
+    --color-nav-link: white;
+    --color-nav-link-hover: rgba(44, 106, 177, 0.651);
+    --color-header-title: #101b31;
+    --color-about-header: #f1964b;
+    --color-about-header-hover: #eb8a3c;
+}
+
+
+.nav {
+    background-color: var(--color-nav);
+    font-size: 1.25em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; 
+    padding-right: 35%;
+}
+.nav a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    color: var(--color-nav-link);
+    -webkit-transition: background-color 500ms;
+    -o-transition: background-color 500ms;
+    transition: background-color 500ms;
+    border-radius: 15%;
+}
+
+.nav a:hover{
+    background-color: var(--color-nav-link-hover);
+}
+
+.nav-item, .nav-list {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.nav-list {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+
+
+/* FOOTER   */
+/* FOOTER  */
+
+.footer{
+    background-color: var(--color-nav);
+    padding: 1rem;
+}
+
+.footer-nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* margin-bottom: 3rem; */
+}
+.footer-item {
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    padding: 3rem;
+}
+.footer-link{
+    font-size: 1.25rem;
+    color: honeydew;
+    text-decoration: none;
+    -webkit-transition: background-color 500ms;
+    -o-transition: background-color 500ms;
+    transition: background-color 500ms;
+    border-radius: 20%;
+    padding: 1rem;
+}
+.footer-link:hover{
+    background-color: var(--color-nav-link-hover);
+}
+
+.footer-logo{
+    height: 8rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+.footer-copyright{
+    font-size: 1.5rem;
+    color:var(--color-nav-hover);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.foot-name{
+    color: #ecb83d;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.foot-name:hover{
+    color: #f94144;
+}
+
+@media (min-width: 300px) and (max-width: 750px){
+    .footer-link{
+        font-size: 1rem;
+    }
+    .nav a{
+        font-size: 1rem;
+    }
+    .footer-item{
+        padding: 1rem 0;
+    }
+}
