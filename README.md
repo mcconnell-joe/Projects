@@ -16,7 +16,7 @@ TurnBased is a text-based game that I am (was) working on. I am implementing man
 
 I have paused this project to focus on other projects.
 
-## JavaScript + HTML / CSS -- code in personalWebsite
+## JavaScript + HTML / CSS -- code in personal-Website
 
 ### Guess My Number && Dice Game
 
