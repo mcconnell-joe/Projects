@@ -1,0 +1,32 @@
+{
+  "name": "work-practice",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.0.2",
+    "@graphql-tools/load": "^7.1.2",
+    "apollo-server": "^2.25.2",
+    "babel-core": "^6.26.3",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "graphql-tools": "^7.0.5",
+    "jQuery": "^1.7.4",
+    "jsdom": "^16.7.0",
+    "node-jquery": "^0.1.0"
+  },
+  "devDependencies": {
+    "apollo-server-express": "^3.1.2",
+    "babel-plugin-graphql-import": "^2.0.0",
+    "babel-plugin-import-graphql": "^2.8.1",
+    "graphql-import": "^1.0.2",
+    "indeed": "^1.1.0",
+    "prettier": "2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

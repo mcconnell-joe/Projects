@@ -1,0 +1,6 @@
+type JobsHealth {
+	health: Health
+}
+type Health {
+	status: String
+}

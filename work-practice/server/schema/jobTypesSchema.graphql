@@ -1,0 +1,15 @@
+type JobParent {
+    job: Job
+    totals: Totals
+}
+type Job {
+    url: String
+    title: String
+    state: String
+    city: String
+}
+type Totals {
+    total: Int
+    state: String
+    city: String
+}

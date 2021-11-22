@@ -1,0 +1,3 @@
+extend type Query {
+	jobData(location: [String]!): JobParent
+}

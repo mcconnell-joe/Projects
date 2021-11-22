@@ -1,0 +1,4 @@
+
+Indeed API:
+Client ID: f42c4f7849a497da4c6f059007298a5f9c680d4a419654744836eae0c8d125e9
+Secrets: Cp4DyRmx9tmD7J3xG74haCZh2d0cjaQvLqgpb5mqZbmL42VaCUNglmIKvAPPeJfm
